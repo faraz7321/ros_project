@@ -10,7 +10,7 @@ import rospy
 import threading
 
 import roslib
-roslib.load_manifest('my_teleop_twist_keyboard')
+roslib.load_manifest('teleop_twist_keyboard')
 
 
 if sys.platform == 'win32':
@@ -83,7 +83,7 @@ class PublishThread(threading.Thread):
     def __init__(self, rate):
         super(PublishThread, self).__init__()
         self.publisher = rospy.Publisher(
-            'rexrov/cmd_vel', TwistMsg, queue_size=1)  # added node for cmd_vel
+            'cmd_vel', TwistMsg, queue_size=1)  # added node for cmd_vel
         self.x = 0.0
         self.y = 0.0
         self.z = 0.0
@@ -206,7 +206,7 @@ def vels(speed, turn):
 if __name__ == "__main__":
     settings = saveTerminalSettings()
 
-    rospy.init_node('my_teleop_twist_keyboard')
+    rospy.init_node('teleop_twist_keyboard')
 
     speed = rospy.get_param("~speed", 0.5)
     turn = rospy.get_param("~turn", 1.0)
