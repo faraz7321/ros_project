@@ -1,0 +1,68 @@
+PARAMETERS
+ * /rexrov/acceleration_control/tf_prefix: rexrov/
+ * /rexrov/ground_truth_to_tf_rexrov/child_frame_id: /rexrov/base_link
+ * /rexrov/ground_truth_to_tf_rexrov/footprint_frame_id: /rexrov/base_foot...
+ * /rexrov/ground_truth_to_tf_rexrov/frame_id: world
+ * /rexrov/ground_truth_to_tf_rexrov/odometry_topic: /rexrov/pose_gt
+ * /rexrov/ground_truth_to_tf_rexrov/stabilized_frame_id: /rexrov/base_stab...
+ * /rexrov/joy_uuv_velocity_teleop/deadman_button: -1
+ * /rexrov/joy_uuv_velocity_teleop/exclusion_buttons: [4, 5]
+ * /rexrov/joy_uuv_velocity_teleop/mapping/pitch/axis: -1
+ * /rexrov/joy_uuv_velocity_teleop/mapping/pitch/gain: 0.0
+ * /rexrov/joy_uuv_velocity_teleop/mapping/roll/axis: -1
+ * /rexrov/joy_uuv_velocity_teleop/mapping/roll/gain: 0.0
+ * /rexrov/joy_uuv_velocity_teleop/mapping/x/axis: 4
+ * /rexrov/joy_uuv_velocity_teleop/mapping/x/gain: 0.3
+ * /rexrov/joy_uuv_velocity_teleop/mapping/y/axis: 3
+ * /rexrov/joy_uuv_velocity_teleop/mapping/y/gain: 0.3
+ * /rexrov/joy_uuv_velocity_teleop/mapping/yaw/axis: 0
+ * /rexrov/joy_uuv_velocity_teleop/mapping/yaw/gain: 0.2
+ * /rexrov/joy_uuv_velocity_teleop/mapping/z/axis: 1
+ * /rexrov/joy_uuv_velocity_teleop/mapping/z/gain: 0.3
+ * /rexrov/joy_uuv_velocity_teleop/type: twist
+ * /rexrov/joystick/autorepeat_rate: 10
+ * /rexrov/joystick/dev: /dev/input/js0
+ * /rexrov/pid/inertial/ixx: 525.39
+ * /rexrov/pid/inertial/ixy: 0
+ * /rexrov/pid/inertial/ixz: 0
+ * /rexrov/pid/inertial/iyy: 794.2
+ * /rexrov/pid/inertial/iyz: 0
+ * /rexrov/pid/inertial/izz: 691.23
+ * /rexrov/pid/mass: 1862.0
+ * /rexrov/robot_description: <?xml version="1....
+ * /rexrov/robot_state_publisher/publish_frequency: 5
+ * /rexrov/robot_state_publisher/robot_description: /rexrov/robot_des...
+ * /rexrov/thruster_allocator/tam: [[0.1597426884844...
+ * /rexrov/thruster_manager/base_link: base_link
+ * /rexrov/thruster_manager/conversion_fcn: proportional
+ * /rexrov/thruster_manager/conversion_fcn_params/gain: 0.00031
+ * /rexrov/thruster_manager/max_thrust: 2000.0
+ * /rexrov/thruster_manager/tf_prefix: rexrov
+ * /rexrov/thruster_manager/thruster_frame_base: thruster_
+ * /rexrov/thruster_manager/thruster_topic_prefix: thrusters/
+ * /rexrov/thruster_manager/thruster_topic_suffix: /input
+ * /rexrov/thruster_manager/timeout: -1
+ * /rexrov/thruster_manager/update_rate: 50
+ * /rexrov/velocity_control/angular_d: 1.0
+ * /rexrov/velocity_control/angular_i: 2.0
+ * /rexrov/velocity_control/angular_p: 10.0
+ * /rexrov/velocity_control/angular_sat: 5.0
+ * /rexrov/velocity_control/linear_d: 0.0
+ * /rexrov/velocity_control/linear_i: 2.0
+ * /rexrov/velocity_control/linear_p: 10.0
+ * /rexrov/velocity_control/linear_sat: 20.0
+ * /rosdistro: noetic
+ * /rosversion: 1.15.14
+
+NODES
+  /
+    rviz (rviz/rviz)
+  /rexrov/
+    acceleration_control (uuv_control_cascaded_pid/AccelerationControl.py)
+    ground_truth_to_tf_rexrov (uuv_assistants/uuv_message_to_tf)
+    joy_uuv_velocity_teleop (uuv_teleop/vehicle_teleop.py)
+    joystick (joy/joy_node)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    thruster_allocator (uuv_thruster_manager/thruster_allocator.py)
+    urdf_spawner (uuv_descriptions/spawn_model)
+    velocity_control (uuv_control_cascaded_pid/VelocityControl.py)

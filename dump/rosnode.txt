@@ -1,0 +1,14 @@
+~/ros_project$ rosnode list
+	/gazebo
+	/gazebo_gui
+	/my_teleop_twist_keyboard
+	/rexrov/acceleration_control
+	/rexrov/ground_truth_to_tf_rexrov
+	/rexrov/joy_uuv_velocity_teleop
+	/rexrov/joystick
+	/rexrov/robot_state_publisher
+	/rexrov/thruster_allocator
+	/rexrov/urdf_spawner
+	/rexrov/velocity_control
+	/rosout
+	/rviz
