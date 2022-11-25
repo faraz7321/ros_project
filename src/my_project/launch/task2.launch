@@ -13,7 +13,7 @@
     <arg name="message_type" default="twist" />
 
     <group ns="$(arg uuv_name)">
-        <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_twist_keyboard"
+        <node pkg="my_teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="my_teleop_twist_keyboard"
             launch-prefix="gnome-terminal --command">
             <!-- <arg name="cmd_vel" value="rexrov/cmd_vel" /> -->
             <remap from="output" to="/$(arg uuv_name)/$(arg output_topic)" />

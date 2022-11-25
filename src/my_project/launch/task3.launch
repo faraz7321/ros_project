@@ -4,18 +4,18 @@
     <include file="$(find uuv_gazebo_worlds)/launch/empty_underwater_world.launch" />
 
     <!-- spawn default rexrov -->
-    <include file="$(find uuv_gazebo)/launch/rexrov_demos/rexrov_default.launch" />
+    <include file="$(find uuv_gazebo)/launch/rexrov_demos/rexrov_wrench_control.launch" />
 
     <!-- run teleop twist keyboard node in new terminal-->
     <arg name="uuv_name" default="rexrov" />
     <arg name="output_topic" default="thruster_manager/input" />
     <!-- The type of message can also be geometry_msgs/Accel -->
-    <arg name="geometry_msgs" default="Wrench" />
+    <!-- <arg name="message_type" default="twist" /> -->
 
     <group ns="$(arg uuv_name)">
-        <node pkg="uuv_control_cascaded_pids" type="AccelerationControl.py" name="uuv_control_cascaded_pids"
+        <node pkg="my_project" type="controller.py" name="my_project"
             launch-prefix="gnome-terminal --command">
-            <!-- <arg name="cmd_vel" value="rexrov/cmd_vel" /> -->
+            <arg name="model_name" value="rexrov" />
             <remap from="output" to="/$(arg uuv_name)/$(arg output_topic)" />
             <rosparam subst_value="true"></rosparam>
         </node>

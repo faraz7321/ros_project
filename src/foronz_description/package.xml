@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>foronz_description</name>
+  <version>0.6.13</version>
+  <description>The foronz_description package</description>
+
+  <maintainer email="fa.ahmad@jacobs-university.de">Faraz Ahmad</maintainer>
+
+  <author email="fa.ahmad@jacobs-university.de">Faraz Ahmad</author>
+
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>uuv_sensor_ros_plugins</exec_depend>
+  <exec_depend>uuv_gazebo_ros_plugins</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>uuv_assistants</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <test_depend>rosunit</test_depend>
+  <test_depend>rostest</test_depend>
+  <test_depend>xacro</test_depend>
+
+</package>
