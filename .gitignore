@@ -5,3 +5,4 @@ logs
 .catkin_tools
 *.pyc
 bagfiles/2022-11-04-19-21-31.bag
+.catkin_tools/profiles/default/devel_collisions.txt
