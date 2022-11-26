@@ -5,6 +5,7 @@
 - implementation of uuv_simulation and husky gazebo
 - https://github.com/my-name-is-D/uuv_simulator.git
 - https://github.com/husky/husky
+- https://github.com/dfki-ric/phobos # blender add on to generate URDF
 
 ## Quick Start
 
