@@ -25,6 +25,8 @@
 
 ```$ roslaunch uuv_control_cascaded_pid joy_velocity.launch uuv_name:=rexrov model_name:=rexrov joy_id:=0```
 
+all stuff related to rostopic params etc is saved in /dump folder
+
 
 ## Creating new robot
 
