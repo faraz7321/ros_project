@@ -60,3 +60,34 @@ To command the vehicle, you have to start the thruster manager and publish a ROS
 eg
 
 ```$ roslaunch my_project task2.launch # task3.launch or task4d.launch```
+
+## Project Guide
+### Task1
+Default rexrov launches gazebo GUI and URDF and some other nodes used to control the AUV, like velocity_teleop wrench_controller or which subscribe to Twist/Wrench messages or services. 
+Please find the output for the nodes, topics, services and messages including screenshots of rqt or the terminal output in ```ros_project/dump``` folder.
+- ```$ rosnode list``` # debug information about ROS Nodes, including publications, subscriptions and connections.
+- ```$ rostopic list``` # publishers, subscribers, publishing rate, and ROS Messages.
+- ```$ rossrv list``` # prints out service descriptions, packages that contain .srv files
+- ```$ rosservice list``` # listing and querying ROS Services.
+- ```$ rosmsg list``` # displaying information about ROS Message types.
+- ```$ rqt_graph``` # GUI plugin for visualizing the ROS computation graph.
+
+## Task2
+- ```$ roslaunch my_project task2.launch```
+- ```$ cd bagfiles```
+- ```$ rosbag record rexrov/cmd_vel```
+- ```$ rqt_plot rexrov/cmd_vel/angular:linear```
+- ```$ rosbag play <bagfile>```
+- The screenshots are save in /dump folder
+
+## Task3
+- node can be found at ```ros_project/src/my_project/scripts/wrench_controller.py```
+- ```$ roslaunch my_project task3.launch```
+
+## Task4
+- Blender files are saved in /foronz_xD
+- robot descriptions are ```ros_project/src/foronz_simulator/foronz_description```
+- Using default thruster placement cuz why not. 
+- part c node ```src/my_project/scripts/thruster_allocator.py```
+- finallyy ```$ roslaunch my_project task4d.launch```
+
