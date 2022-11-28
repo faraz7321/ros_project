@@ -15,7 +15,7 @@
         <node pkg="my_project" type="wrench_controller.py" name="wrench_controller"
             launch-prefix="gnome-terminal --command">
             <!-- <arg name="cmd_vel" value="rexrov/cmd_vel" /> -->
-            <remap from="output" to="/$(arg uuv_name)/$(output_topic)" />
+            <!-- <remap from="output" to="/$(arg uuv_name)/$(output_topic)" /> -->
             <rosparam subst_value="true"></rosparam>
         </node>
     </group>
