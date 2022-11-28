@@ -1,8 +1,8 @@
 <launch>
   <!-- Name of the robot model  -->
-  <arg name="model_name" default="foronz"/>
+  <arg name="model_name" default="foronz" />
   <!-- Namespace of the robot in the simulation (it can be different from the original model name) -->
-  <arg name="uuv_name" default="$(arg model_name)"/>
+  <arg name="uuv_name" default="$(arg model_name)" />
   <!-- Name of the base link -->
   <arg name="base_link" default="base_link" />
   <!--
@@ -29,22 +29,33 @@
     The TAM.yaml file will be store in the folder defined by the following
     argument output_dir
   -->
-  <arg name="reset_tam" default="false"/>
+  <arg name="reset_tam" default="false" />
   <!-- Output folder to store the TAM.yaml and thruster_manager.yaml files -->
-  <arg name="output_dir" default="$(find foronz_control)/config"/>
+  <arg name="output_dir" default="$(find foronz_control)/config" />
   <!-- Thruster manager configuration file path -->
-  <arg name="config_file" default="$(find foronz_control)/config/thruster_manager.yaml"/>
+  <arg name="config_file" default="$(find foronz_control)/config/thruster_manager.yaml" />
   <!-- Thruster allocation matrix file path -->
-  <arg name="tam_file" default="$(find foronz_control)/config/TAM.yaml"/>
+  <arg name="tam_file" default="$(find foronz_control)/config/TAM.yaml" />
 
-  <include file="$(find uuv_thruster_manager)/launch/thruster_manager.launch">
-    <arg name="model_name" value="$(arg model_name)"/>
-    <arg name="uuv_name" value="$(arg uuv_name)"/>
-    <arg name="base_link" value="$(arg base_link)"/>
-    <arg name="timeout" value="$(arg timeout)"/>
-    <arg name="reset_tam" value="$(arg reset_tam)"/>
-    <arg name="output_dir" value="$(arg output_dir)"/>
-    <arg name="config_file" value="$(arg config_file)"/>
-    <arg name="tam_file" value="$(arg tam_file)"/>
-   </include>
+  <group ns="$(arg uuv_name)">
+    <rosparam file="$(arg config_file)" command="load" />
+
+    <rosparam param="thruster_manager/tf_prefix" subst_value="true">
+      $(arg uuv_name)
+    </rosparam>
+
+    <rosparam param="thruster_manager/timeout" subst_value="true">
+      $(arg timeout)
+    </rosparam>
+
+    <node pkg="my_project"
+      type="thruster_allocator.py"
+      name="thruster_allocator"
+      output="screen">
+      <!-- Load thruster allocation matrix -->
+      <rosparam file="$(arg tam_file)" command="load" />
+    </node>
+
+  </group>
+
 </launch>

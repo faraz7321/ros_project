@@ -1,0 +1,26 @@
+<launch>
+    <arg name="uuv_name" default="foronz" />
+    <arg name="output_topic" default="thruster_manager/input" />
+    <!-- The type of message can also be geometry_msgs/Accel -->
+    <arg name="message_type" default="twist" />
+
+    <!-- include launch files of empty world -->
+    <include file="$(find uuv_gazebo_worlds)/launch/empty_underwater_world.launch" />
+
+    <!-- spawn default rexrov -->
+    <include file="$(find foronz_description)/launch/upload_foronz_default.launch" />
+
+    <include file="$(find foronz_control)/launch/start_thruster_manager.launch" />
+
+    <group ns="$(arg uuv_name)">
+        <node pkg="my_project" type="wrench_controller.py" name="wrench_controller"
+            launch-prefix="gnome-terminal --command">
+            <!-- <arg name="cmd_vel" value="rexrov/cmd_vel" /> -->
+            <!-- <remap from="output" to="/$(arg uuv_name)/$(output_topic)" /> -->
+            <rosparam subst_value="true"></rosparam>
+        </node>
+    </group>
+
+    
+
+</launch>
