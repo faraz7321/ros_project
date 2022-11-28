@@ -77,7 +77,7 @@ Please find the output for the nodes, topics, services and messages including sc
 - ```$ cd bagfiles```
 - ```$ rosbag record rexrov/cmd_vel```
 - ```$ rqt_plot rexrov/cmd_vel/angular:linear```
-- ```$ rosbag play <bagfile>
+- ```$ rosbag play <bagfile>```
 - The screenshots are save in /dump folder
 
 ## Task3
