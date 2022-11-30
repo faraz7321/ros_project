@@ -4,7 +4,7 @@
 ### Instructor: Prof. Dr. Francesco Maurelli f.maurelli@jacobs-university.de
 
 - implementation of [uuv_simulator][1] and [husky][2]
-- [phobos] # blender add on to generate URDF
+- [phobos][3] # blender add on to generate URDF
 
 ## Quick Start
 
