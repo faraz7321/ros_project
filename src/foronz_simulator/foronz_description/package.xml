@@ -5,8 +5,13 @@
   <description>The foronz_description package</description>
 
   <maintainer email="fa.ahmad@jacobs-university.de">Faraz Ahmad</maintainer>
+  <maintainer email="murajput@jacobs-university.de">Muaaz Rajput</maintainer>
+  <maintainer email="a.zafar@jacobs-university.de">Ainna Zafar</maintainer>
 
   <author email="fa.ahmad@jacobs-university.de">Faraz Ahmad</author>
+  <author email="murajput@jacobs-university.de">Muaaz Rajput</author>
+  <author email="a.zafar@jacobs-university.de">Ainna Zafar</author>
+  
 
   <license>Apache-2.0</license>
 
