@@ -96,5 +96,6 @@ Please find the output for the nodes, topics, services and messages including sc
 - Faraz Ahmad (fa.ahmad@jacobs-university.de)
 - Muaaz Rajput (murajput@jacobs-universty.de)
 - Ainna Zafar (a.zafar@jacobs-university.de)
+
 Each task of the project was done by the three group members together, so there is really no way to distribute the contributions. Consider it 33.333333333333% contributed by each member. Vielen Dank!
 
