@@ -1,6 +1,7 @@
 # Robotics and Intelligent Systems
 
 ## Lab-1 Fall-2022
+### Instructor: Prof. Dr. Francesco Maurelli f.maurelli@jacobs-university.de
 
 - implementation of uuv_simulation and husky gazebo
 - https://github.com/my-name-is-D/uuv_simulator.git
