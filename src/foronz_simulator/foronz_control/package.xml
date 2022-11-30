@@ -7,7 +7,13 @@
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="foronz@todo.todo">foronz</maintainer>
+  <maintainer email="fa.ahmad@jacobs-university.de">Faraz Ahmad</maintainer>
+  <maintainer email="murajput@jacobs-university.de">Muaaz Rajput</maintainer>
+  <maintainer email="a.zafar@jacobs-university.de">Ainna Zafar</maintainer>
+
+  <author email="fa.ahmad@jacobs-university.de">Faraz Ahmad</author>
+  <author email="murajput@jacobs-university.de">Muaaz Rajput</author>
+  <author email="a.zafar@jacobs-university.de">Ainna Zafar</author>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
