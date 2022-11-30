@@ -3,10 +3,8 @@
 ## Lab-1 Fall-2022
 ### Instructor: Prof. Dr. Francesco Maurelli f.maurelli@jacobs-university.de
 
-- implementation of uuv_simulation and husky gazebo
-- https://github.com/my-name-is-D/uuv_simulator.git
-- https://github.com/husky/husky
-- https://github.com/dfki-ric/phobos # blender add on to generate URDF
+- implementation of [uuv_simulator][1] and [husky][2]
+- [phobos] # blender add on to generate URDF
 
 ## Quick Start
 
@@ -100,3 +98,8 @@ Please find the output for the nodes, topics, services and messages including sc
 
 Each task of the project was done by the three group members together, so there is really no way to distribute the contributions. Consider it 33.333333333333% contributed by each member. Vielen Dank!
 
+[1]: https://github.com/my-name-is-D/uuv_simulator.git "uuv_simulator"
+
+[2]: https://github.com/husky/husky "husky"
+
+[3]: https://github.com/dfki-ric/phobos "phobos"
